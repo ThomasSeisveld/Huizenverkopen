@@ -7,7 +7,7 @@ $password = $_POST['password'];
 $number = $_POST['number'];
 
 // Database connection
-$conn = new mysqli('localhost','UserHuis','','Huizenverkoop_DB');
+$conn = new mysqli('localhost:3306','UserHuis','UserHuis123','Huizenverkoop_DB');
 if($conn->connect_error){
     echo "$conn->connect_error";
     die("Connection Failed : ". $conn->connect_error);
