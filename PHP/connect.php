@@ -7,7 +7,7 @@ $password = $_POST['password'];
 $number = $_POST['number'];
 
 // Database connection
-$conn = new mysqli('localhost:3306','','','Huizenverkoop_DB');
+$conn = new PDO("mysql:host=$host;dbname=$Huizenverkoop_DB", firstName, password);
 if($conn->connect_error){
     echo "$conn->connect_error";
     die("Connection Failed : ". $conn->connect_error);
