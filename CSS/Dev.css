@@ -90,7 +90,7 @@
     text-decoration: none;
     color: #383838;
     opacity: 0.5;
-    transition: .5s;
+    transition: 1.5s;
 }
 
 .link:hover{
@@ -120,6 +120,7 @@
     font-size: 35px;
     font-weight: 300;
 }
+/* <<<<<<< HEAD */
 
 
 .footer {
@@ -149,3 +150,32 @@
 .footer-text a {
     color: #000;
 }
+
+.flexbox{
+    justify-content: center;
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+Div1{
+    text-align: center;
+    margin: 5px;
+    background-color: #2AA2D6;
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* >>>>>>> 2eeaa43bceda60e8d489f214589fcd409437212c */
