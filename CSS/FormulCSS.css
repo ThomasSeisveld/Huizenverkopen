@@ -4,7 +4,12 @@ html {
     -ms-text-size-adjust: 100%;
 }
 body {
-    margin: 0;
+    margin: 0px;
+}
+.header{
+    background-color: #1b6d85;
+    height: 100px;
+    margin-bottom: 80px;
 }
 article,
 aside,
