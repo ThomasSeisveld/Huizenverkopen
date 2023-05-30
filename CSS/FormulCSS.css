@@ -2097,6 +2097,13 @@ select[multiple].input-lg {
         font-size: 12px;
     }
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
 .btn {
     display: inline-block;
     padding: 6px 12px;
