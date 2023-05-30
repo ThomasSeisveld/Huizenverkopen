@@ -6,12 +6,21 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $number = $_POST['number'];
 
-// Database connection
-$conn = new PDO("mysql:host=$host;dbname=$Huizenverkoop_DB", firstName, password);
-if($conn->connect_error){
-    echo "$conn->connect_error";
-    die("Connection Failed : ". $conn->connect_error);
-} else {
+
+
+// connection
+$serverName = "localhost";
+$UserName = "root";
+$Password = "";
+$DBName = "HuizenverkoopDB";
+
+$conn = mysqli_connect($serverName, $UserName, $Password, $DBName);
+
+if (!$conn) {
+    die("Connection Failed : " . mysqli_connect_error());
+}
+
+else {
     $stmt = $conn->prepare("insert into registration(firstName, lastName, gender, email, password, number) values(?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssi", $firstName, $lastName, $gender, $email, $password, $number);
     $execval = $stmt->execute();
@@ -20,5 +29,3 @@ if($conn->connect_error){
     $stmt->close();
     $conn->close();
 }
-
-?>
