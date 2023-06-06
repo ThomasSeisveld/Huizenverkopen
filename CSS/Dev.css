@@ -22,5 +22,28 @@ Div1{
     transition: all 2s ease-in-out;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.product {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
 
+.product-image {
+    width: 150px;
+    height: 150px;
+}
+
+.product-title {
+    margin-top: 10px;
+}
+
+.product-description {
+    display: none;
+    margin-top: 10px;
+}
+
+.product-button {
+    margin-top: 10px;
+}
 
