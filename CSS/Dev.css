@@ -17,6 +17,7 @@ Div1{
     width: 300px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.15);
+    transition: all 3s ease-in-out;
 }
 Div1:hover{
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 1), 0 3px 20px 0 rgba(0, 0, 0, 1);
