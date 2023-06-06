@@ -119,27 +119,43 @@ const createsign = () => {
     `;
 }
 const createlog = () => {
-    let container = document.querySelector('.navbar');
+    let container = document.querySelector('.container');
 
     container.innerHTML = `
-        <div class="nav">
-           <a href="index.html"><img src="img/logo.png" class="brand-logo" alt=""></a>
-            <div class="nav-items">
-                <div class="search">
-                    <input type="text" class="search-box" placeholder="search brand, product">
-                    <button class="search-btn">search</button>
-                </div>
-                <a href="signupFormulier.html"><img src="img/user.png" alt=""></a>
-                <a href="#"><img src="img/cart.png" alt=""></a>
-            </div>
-        </div>
-        <ul class="links-container">
-            <li class="link-item"><a href="index.html" class="link">home</a></li>
-            <li class="link-item"><a href="#" class="link">Huizen</a></li>
-            <li class="link-item"><a href="#" class="link">Villa's</a></li>
-            <li class="link-item"><a href="#" class="link">Garage's</a></li>
-            <li class="link-item"><a href="#" class="link">Contact</a></li>
-        </ul>
+         <div class="row col-md-6 col-md-offset-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">
+        <h1>Registration Form</h1>
+      </div>
+      <div class="panel-body">
+        <form action="PHP/connect.php" method="post">
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+            />
+          </div>
+          <input type="submit" class="btn btn-primary" name="submit" />
+        </form>
+      </div>
+      <div class="panel-footer text-right">
+        <small>&copy;2023Villa4u</small>
+      </div>
+    </div>
+  </div>
     `;
 }
 
