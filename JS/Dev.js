@@ -185,25 +185,25 @@ const createBack = () => {
     container.innerHTML = `
        <div class="flexbox">
              <div1 id="product" onclick="createHouse()">
-                <a href=""><img src="img/huis1.jpeg" alt="huis" class="huis-img"></a>
+                <a><img src="img/huis1.jpeg" alt="huis" class="huis-img"></a>
                 <h4 class="huis" style="color: #2AA2D6;">Zijdeweg 26</h4>
                 <p class="huis">2244 BG Wassenaar</p>
                 <p class="huis"><b>€ 1.365.000</b></p>
             </div1>
             <div1>
-               <a href=""><img src="img/huis2.jpeg" alt="huis" class="huis-img"></a>
+               <a><img src="img/huis2.jpeg" alt="huis" class="huis-img"></a>
                 <h4 class="huis" style="color: #2AA2D6;">Botersloot 545</h4>
                 <p class="huis">3011 HE Rotterdam</p>
                 <p class="huis"><b>€ € 1.570.000</b></p>
             </div1>
             <div1>
-                <a href=""><img src="img/huis3.jpeg" alt="huis" class="huis-img"></a>
+                <a><img src="img/huis3.jpeg" alt="huis" class="huis-img"></a>
                 <h4 class="huis" style="color: #2AA2D6;">Botersloot 547</h4>
                 <p class="huis">3011 HE Rotterdam</p>
                 <p class="huis"><b>€ € 1.975.000</b></p>
             </div1>
             <div1>
-                <a href=""><img src="img/huis2.jpeg" alt="huis" class="huis-img"></a>
+                <a><img src="img/huis2.jpeg" alt="huis" class="huis-img"></a>
                 <h4 class="huis" style="color: #2AA2D6;">Wijnhaven 73 X</h4>
                 <p class="huis">2244 WK Rotterdam</p>
                 <p class="huis"><b>€ € 1.850.000 </b></p>
@@ -216,12 +216,12 @@ const createHouse = () => {
 
     container.innerHTML = `
         <div class="flexbox">
-             <div1 id="product" onclick="createBack()">
-                <a href=""><img src="img/huis1.jpeg" alt="huis" class="huis-img"></a>
+             <div class="Info" id="product" onclick="createBack()">
+                <a><img src="img/huis1.jpeg" alt="huis" class="huis-img"></a>
                 <h4 class="huis" style="color: #2AA2D6;">Zijdeweg 26</h4>
-                <p class="huis">2244 BG Wassenaar</p>
-                <p class="huis"><b>€ 1.365.000</b></p>
-            </div1>
+                <p>Plaats: 2244 BG Wassenaar</p>
+                <p>Prijs: <b>€ 1.365.000</b></p>
+            </div>
             
         </div>
       `;
