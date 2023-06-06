@@ -15,6 +15,7 @@
 Div1{
     margin: 10px;
     width: 300px;
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.15);
 }
@@ -30,11 +31,4 @@ Div1{
     flex-wrap: wrap;
 }
 
-.flexbox > div1 {
-    flex: 0 0 30%;
-    box-sizing: border-box;
-    padding: 10px;
-}
 
-
-/* >>>>>>> 2eeaa43bceda60e8d489f214589fcd409437212c */

@@ -177,3 +177,46 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+
+const createHouse = () => {
+    let container = document.querySelector('.container');
+
+    container.innerHTML = `
+         <div class="row col-md-6 col-md-offset-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">
+        <h1>Registration Form</h1>
+      </div>
+      <div class="panel-body">
+        <form action="PHP/connect.php" method="post">
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+            />
+          </div>
+          <input type="submit" class="btn btn-primary" name="submit" />
+        </form>
+      </div>
+      <div class="panel-footer text-right">
+        <small>&copy;2023Villa4u</small>
+      </div>
+    </div>
+  </div>
+      `;
+}
+
