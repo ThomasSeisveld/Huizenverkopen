@@ -74,18 +74,39 @@
         }
     } else {
         echo "Invalid request.";
-    }
-
+    } 
     ?>
+
 <section class="section">
 <div class="main">
-    <div><img src='<? echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'></div>
-    <h1> <? echo $address ?></h1>
+    <img src='<?php echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'>
+    <h1> <?php echo $address ?></h1>
     <p class='huis'>Postcode: <?php echo $postcode ?></p>
     <p class='huis'>Prijs: <?php echo $price ?></p>
 </div>
 
-
+<div class="bieden">
+    <?php 
+    if (!isset($_SESSION['current_bid'])) {
+        $_SESSION['current_bid'] = 0;
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $newBid = $_POST['bid'];
+        
+            if ($newBid > $_SESSION['current_bid']) {
+                $_SESSION['current_bid'] = $newBid;
+                echo "<p>Uw bod is geaccepteerd.</p>";
+            } 
+        }
+        
+        echo "Huidig bod: " . $_SESSION['current_bid'];
+        echo "<form method='post' action=''>";
+        echo "<input type='text' name='bid' placeholder='Voer uw bod in'>";
+        echo "<input type='submit' value='Bieden'>";
+        echo "</form>";
+    }
+    ?>
+</div>
 
 <div class="info">
     <h2>Informatie</h2> 
@@ -100,19 +121,20 @@
         </tr>
         <tr>
             <td>Antaal kamers:</td>
-            <td><? echo $atlkamer ?></td>
+            <td><?php echo $atlkamer ?></td>
         </tr>
         <tr>
             <td>Antaal badkamers:</td>
-            <td><? echo $atlbadkamer ?></td>
+            <td><?php echo $atlbadkamer ?></td>
         </tr>
         <tr>
             <td>Soort woning:</td>
-            <td><? echo $soort ?></td>
+            <td><?php echo $soort ?></td>
         </tr>
     </table>
 </div>
 </section>
+
 <div class="footer">
         <hr class="hr-top">
         <img src="img/logo.png" id="logo-footer" alt="logo">
