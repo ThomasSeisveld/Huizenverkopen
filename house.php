@@ -77,7 +77,7 @@
     } 
     ?>
 
-<section class="section">
+<section class="section4">
 <div class="main">
     <img src='<?php echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'>
     <h1> <?php echo $address ?></h1>
