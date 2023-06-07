@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>House Details</title>
+    <title>Villa4U</title>
     <meta charset="UTF-8">  
 
     <link rel="stylesheet" href="CSS/house.css">
@@ -19,7 +19,9 @@ if (isset($_GET['id'])) {
     $pagename = "";
     $info = "";
 
+
     if ($privacy_id == "conditions") {
+
         $pagename = "<h2>Conditions</h2>";
         $info = "<p><b>Property Information Accuracy:</b>
         <br>
@@ -62,6 +64,7 @@ if (isset($_GET['id'])) {
         a. The website should include disclaimers regarding the accuracy of information, potential risks associated with real estate transactions, and any limitations of liability for the website owner.
         b. Any legal or financial advice provided on the website should be clearly stated as general information and not personalized advice.</p>";
     } elseif ($privacy_id == "cookies"){
+
         $pagename = "<h3>Cookies</h3>";
         $info = "<p><b>1. Algemeen</b>
         <br>
@@ -130,8 +133,9 @@ if (isset($_GET['id'])) {
         <br>
         We informeren je zo goed mogelijk over de doelen waarvoor cookies op je device worden opgeslagen, en welke dat dan precies zijn. Alle functionele en analytische cookies plaatsen we direct zodra je Villa4U gebruikt. Voor het plaatsen van personalisatie- en advertentiecookies hebben we je toestemming nodig. Die verstrek je aan ons door een expliciete keuze te maken via onze cookiebanner, of via het voorkeurenmenu. Mocht je geen toestemming willen geven, dan kun je van Villa4U gebruikmaken zonder de personalisatie- en advertentiecookies. Als je géén toestemming geeft voor advertentiecookies, betekent dit overigens niet dat er geen advertenties meer worden getoond. De advertenties zullen in dat geval alleen niet langer zijn afgestemd op jouw persoonlijke interesses.</p>";
     } elseif ($privacy_id == "privacy") {
+
         $pagename = "<h3>Privacy</h3>";
-        $info = "        <p><b>Information We Collect:</b>
+        $info = "<p><b>Information We Collect:</b>
         <br>
 
         Personal Information: When you visit our website or use our services, we may collect certain personal information such as your name, email address, phone number, and mailing address. This information is necessary for us to provide you with the requested services and communicate with you effectively.
