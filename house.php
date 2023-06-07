@@ -77,7 +77,7 @@
     } 
     ?>
 
-<section class="section">
+<section4 class="section4">
 <div class="main">
     <img src='<?php echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'>
     <h1> <?php echo $address ?></h1>
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
     </table>
 </div>
-</section>
+</section4>
 
 <div class="footer">
         <hr class="hr-top">
