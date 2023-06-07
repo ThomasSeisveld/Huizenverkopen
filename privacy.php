@@ -4,7 +4,7 @@
     <title>Villa4U</title>
     <meta charset="UTF-8">  
 
-    <link rel="stylesheet" href="CSS/house.css">
+    <link rel="stylesheet" href="CSS/privacy.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/footer.css">   
 </head>
@@ -62,7 +62,9 @@ if (isset($_GET['id'])) {
         <b>Disclaimers and Limitations:</b>
         <br>
         a. The website should include disclaimers regarding the accuracy of information, potential risks associated with real estate transactions, and any limitations of liability for the website owner.
-        b. Any legal or financial advice provided on the website should be clearly stated as general information and not personalized advice.</p>";
+        b. Any legal or financial advice provided on the website should be clearly stated as general information and not personalized advice.</p>
+        ";
+
     } elseif ($privacy_id == "cookies"){
 
         $pagename = "<h3>Cookies</h3>";
@@ -186,10 +188,10 @@ if (isset($_GET['id'])) {
         echo "Invalid request.";
     }
     ?>
-
+<div class='main'>
 <p><?php echo $pagename ?></p>
 <p><?php echo $info ?></p>
-
+</div>
 
 <div class="footer">
         <hr class="hr-top">
