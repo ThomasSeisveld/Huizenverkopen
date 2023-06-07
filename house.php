@@ -86,27 +86,44 @@
 </div>
 
 <div class="bieden">
+    <h3>Maak een bod</h3>
     <?php 
-    if (!isset($_SESSION['current_bid'])) {
-        $_SESSION['current_bid'] = 0;
-        
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $newBid = $_POST['bid'];
-        
-            if ($newBid > $_SESSION['current_bid']) {
-                $_SESSION['current_bid'] = $newBid;
-                echo "<p>Uw bod is geaccepteerd.</p>";
-            } 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $newBid = $_POST['bid'];
+    
+    // Controleer of het nieuwe bod hoger is dan het vorige bod en hoger dan 1.000.000 euro
+    if (empty($_SESSION['bids'])) {
+        if ($newBid >= 1000000) {
+            $_SESSION['bids'][] = $newBid;
+            echo "<p class='accepted>'>Uw bod is geaccepteerd.</p>";
+        } else {
+            echo "<p class='error'>Uw bod moet hoger zijn dan &euro;1.000.000 euro.</p>";
         }
-        
-        echo "Huidig bod: " . $_SESSION['current_bid'];
-        echo "<form method='post' action=''>";
-        echo "<input type='text' name='bid' placeholder='Voer uw bod in'>";
-        echo "<input type='submit' value='Bieden'>";
-        echo "</form>";
+    } else {
+        $currentBid = end($_SESSION['bids']);
+        if ($newBid > $currentBid && $newBid >= 1000000) {
+            $_SESSION['bids'][] = $newBid;
+            echo "<p class='accepted>'>Uw bod is geaccepteerd.</p>";
+        } elseif ($newBid < 1000000) {
+            echo "<p class='error'>Uw bod moet hoger zijn dan &euro;1.000.000 euro.</p>";
+        } else {
+            echo "Uw bod moet hoger zijn dan het huidige bod.";
+        }
     }
-    ?>
-
+ }
+ 
+ echo "Huidig bod: ";
+ if (!empty($_SESSION['bids'])) {
+    echo "&euro;" . end($_SESSION['bids']) . ",00";
+    
+ }
+ 
+ echo "<form method='post' action=''>";
+ echo "<input type='text' name='bid' placeholder='Voer uw bod in'>";
+ echo "<input type='submit' value='Bieden'>";
+ echo "</form>";
+ 
+    ?> 
 </div>
 
 <div class="info">
