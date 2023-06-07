@@ -4,9 +4,9 @@
     <title>House Details</title>
     <meta charset="UTF-8">  
 
-    <link rel="stylesheet" href="CSS/hosue.css">
+    <link rel="stylesheet" href="CSS/house.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/footer.css">   
 </head>
 <body>
 <nav class="navbar"></nav>
@@ -75,6 +75,7 @@
     } else {
         echo "Invalid request.";
     }
+
     ?>
 
 <div class="main">
@@ -83,6 +84,8 @@
     <p class='huis'>Postcode: <?php echo $postcode ?></p>
     <p class='huis'>Prijs: <?php echo $price ?></p>
 </div>
+
+
 
 <div class="info">
     <h2>Informatie</h2> 
