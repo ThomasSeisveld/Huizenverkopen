@@ -79,7 +79,7 @@
     ?>
 <section class="section">
 <div class="main">
-    <div><img src='<? echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'></div>
+    <div><img src='<? echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'>
     <h1> <? echo $address ?></h1>
     <p class='huis'>Postcode: <?php echo $postcode ?></p>
     <p class='huis'>Prijs: <?php echo $price ?></p>
