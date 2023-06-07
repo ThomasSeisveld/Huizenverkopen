@@ -76,7 +76,7 @@
         echo "Invalid request.";
     }
     ?>
-
+<section class="section">
 <div class="main">
     <div><img src='<? echo $picture ?>' alt='House' class='huis-img' style='width: 600px;'></div>
     <h1> <? echo $address ?></h1>
@@ -109,7 +109,7 @@
         </tr>
     </table>
 </div>
-
+</section>
 <div class="footer">
         <hr class="hr-top">
         <img src="img/logo.png" id="logo-footer" alt="logo">
