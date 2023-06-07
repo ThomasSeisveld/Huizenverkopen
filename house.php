@@ -10,8 +10,7 @@
 </head>
 <body>
 <nav class="navbar"></nav>
-
-    <?php
+<?php
     if (isset($_GET['id'])) {
         $house_id = $_GET['id'];
 
@@ -75,7 +74,7 @@
     } else {
         echo "Invalid request.";
     } 
-    ?>
+?>
 
 <section4 class="section4">
 <div class="main">
@@ -157,12 +156,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <hr class="hr-top">
         <img src="img/logo.png" id="logo-footer" alt="logo">
             <div class="footer-text">
-                <a href="conditions.html">Conditions</a>               
-                <a href="cookies.html">Cookies</a>
+                <a href="privacy.php?id=conditions">Conditions</a>               
+                <a href="privacy.php?id=cookies">Cookies</a>
 
                 &copy2023Villa4u
 
-                <a href="privacy.html">Privacy</a>
+                <a href="privacy.php?id=privacy">Privacy</a>
                 <a href="contact.html">Contact</a>
             </div>
 
